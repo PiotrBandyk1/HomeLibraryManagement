@@ -26,12 +26,12 @@ def authors(request):
 
 def publishers(request):
     publishers = Publisher.objects.all()
-    return render(request, 'manage_books/publishers.html.jinja', {'publishers': publishers})
+    return render(request, 'manage_books/publisher.html.jinja', {'publishers': publishers})
 
 def series_list(request):
     series = Series.objects.all()
-    return render(request, 'manage_books/series_list.html.jinja', {'series': series})
+    return render(request, 'manage_books/series.html.jinja', {'series': series})
 
 def notes(request):
     notes = Note.objects.all()
-    return render(request, 'manage_books/notes.html.jinja', {'notes': notes})
+    return render(request, 'manage_books/note.html.jinja', {'notes': notes})

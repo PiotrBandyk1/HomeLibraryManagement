@@ -1,1 +1,12 @@
 {% extends "base.html.jinja" %}
+
+{% block content %}
+<div class="p-4 bg-white rounded-lg shadow-md mt-4">
+    <h1 class="text-xl font-bold mb-4">Moje Notatki</h1>
+    <ul class="list-disc list-inside">
+        {% for note in notes %}
+            <li class="py-1">{{ note.content }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
